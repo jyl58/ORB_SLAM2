@@ -1488,7 +1488,10 @@ bool Tracking::Relocalization()
             }
         }
     }
-
+    //delete pnp solver
+    for ( auto pSolver : vpPnPsolvers )
+         delete pSolver;
+ 
     if(!bMatch)
     {
         return false;
