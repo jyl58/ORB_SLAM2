@@ -475,6 +475,7 @@ void LocalMapping::SearchInNeighbors()
             if(pKFi2->isBad() || pKFi2->mnFuseTargetForKF==mpCurrentKeyFrame->mnId || pKFi2->mnId==mpCurrentKeyFrame->mnId)
                 continue;
             vpTargetKFs.push_back(pKFi2);
+            pKFi2->mnFuseTargetForKF = mpCurrentKeyFrame->mnId;
         }
     }
 
